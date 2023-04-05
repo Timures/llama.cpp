@@ -367,3 +367,12 @@ docker run -v /llama/models:/models ghcr.io/ggerganov/llama.cpp:light -m /models
 - Clean-up any trailing whitespaces, use 4 spaces indentation, brackets on same line, `void * ptr`, `int & a`
 - See [good first issues](https://github.com/ggerganov/llama.cpp/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) for tasks suitable for first contributions
 
+
+## Beca Vicune
+```1) git clone https://github.com/ggerganov/llama.cpp.git
+2) качаем модель и кладём туда же
+3) make
+4) ./main -i --interactive-first -r "### Human:" --temp 0 -c 2048 -n -1 --ignore-eos --repeat_penalty 1.2 --instruct -m ggml-vicuna-13b-4bit.bin
+
+// Если у вас CPU с большим количеством тредов, можно поиграться с параметром -t X, по умолчанию X = 4
+```
